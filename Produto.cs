@@ -8,7 +8,7 @@ namespace AppEmpresa
         private string status;
         private string vendedor;
         private string categoria;
-
+        private int id ; 
         public string Descricao
         {
             get { return descricao; }
@@ -44,5 +44,7 @@ namespace AppEmpresa
             get { return categoria; }
             set { categoria = value; }
         }
+
+        public int Id { get; internal set; }
     }
 }

@@ -7,7 +7,96 @@ namespace AppEmpresa
     {
         static void Main(string[] args)
         {
-            // Simulando uma lista de clientes
+            // Senha para login
+            List<User> users = new List<User>();
+            users.Add(new Vendor("joao", "1234"));
+            users.Add(new Customer("bruno", "4321"));
+
+            while (true)
+            {
+                Console.WriteLine("Digite seu nome de usuário:");
+                string username = Console.ReadLine();
+
+                Console.WriteLine("Digite sua senha:");
+                string password = Console.ReadLine();
+
+                Console.WriteLine("Escolha o tipo (vendedor ou cliente):");
+                string type = Console.ReadLine();
+
+                User user = AuthenticateUser(username, password, type, users);
+
+                if (user != null)
+                {
+                    switch (user.UserType)
+                    {
+                        case "vendedor":
+                            user.ShowWelcomeMessage();
+                            ShowDatabaseInfo();
+                            break;
+                        case "cliente":
+                            user.ShowWelcomeMessage();
+                            Console.WriteLine("Você não tem permissão para acessar o banco de dados.");
+                            break;
+                        default:
+                            Console.WriteLine("Tipo de usuário desconhecido.");
+                            break;
+                    }
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("Nome de usuário ou senha incorretos ou tipo de usuário incorreto. Tente novamente.");
+                }
+            }
+        }
+
+        public static User AuthenticateUser(string username, string password, string type, List<User> users)
+        {
+            foreach (User user in users)
+            {
+                if (user.Username == username && user.Password == password && user.UserType == type)
+                {
+                    return user;
+                }
+            }
+            return null;
+        }
+
+        public static void ShowDatabaseInfo()
+        {
+            CarrinhoRepositorio carrinhoRepositorio = new CarrinhoRepositorio();
+
+
+            // Adicionar um produto
+            Produto produto1 = new Produto();
+            carrinhoRepositorio.Adicionar(produto1);
+            // Atualizar a lista de produtos
+            List<Produto> novaListaProdutos = new List<Produto>();
+            carrinhoRepositorio.Atualizar(novaListaProdutos);
+
+            // Excluir um produto por ID
+            int produtoIdParaExcluir = 123; // Substitua 123 pelo ID do produto que deseja excluir
+            carrinhoRepositorio.Excluir(produtoIdParaExcluir);
+
+
+            int produtoIdParaBuscar = 456; // Substitua 456 pelo ID do produto que deseja buscar
+            Produto produtoEncontrado = carrinhoRepositorio.ObterPorID(produtoIdParaBuscar);
+
+
+            // Obter todos os produtos
+            List<Produto> todosProdutos = carrinhoRepositorio.ObterTodos();
+
+            Console.WriteLine("Aqui estão as informações do banco de dados."); 
+
+            Produto produto2 = new Produto();
+            produto2.Descricao = "Notebook";
+            produto2.Preco = "R$2000,00";
+            produto2.Imagem = "NotebookImage";
+            produto2.Status = "Em estoque";
+            produto2.Vendedor = "Loja de Informática";
+            produto2.Categoria = "Informática";
+            produto2.Id = 2; // Defina um ID apropriado
+            novaListaProdutos.Add(produto2);
             List<Cliente> listaClientes = new List<Cliente>();
 
             // Adicionando um cliente à lista
@@ -32,6 +121,7 @@ namespace AppEmpresa
             produto.Status = "Vendido";
             produto.Vendedor = "Vingador";
             produto.Categoria = "Eletro Domestico";
+            produto.Id = 1223;
             listaProduto.Add(produto);
 
             // Simulando uma lista de vendedores
@@ -110,9 +200,12 @@ namespace AppEmpresa
                 Console.WriteLine("Status: " + p.Status);
                 Console.WriteLine("Vendedor: " + p.Vendedor);
                 Console.WriteLine("Categoria: " + p.Categoria);
+                Console.WriteLine("ID: " + p.Id);
                 Console.WriteLine();
             }
-        
+        Console.WriteLine("Aqui estão as informações do banco de dados.");
         }
-    }
+        
+     }
 }
+
