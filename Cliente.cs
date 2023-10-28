@@ -8,7 +8,7 @@ namespace AppEmpresa
         private string rg;
         private string email;
         private string cpf;
-
+        private string senha;
         public string Nome
         {
             get { return nome; }
@@ -43,6 +43,11 @@ namespace AppEmpresa
         {
             get { return cpf; }
             set { cpf = value; }
+        }
+        public string Senha
+        {
+            get { return senha; }
+            set { senha = value; }
         }
     }
 }

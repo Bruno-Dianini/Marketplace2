@@ -1,0 +1,15 @@
+C:\Users\bruno.dianini\Desktop\Marketplace2\obj\Debug\net7.0\Marketplace2.csproj.AssemblyReference.cache
+C:\Users\bruno.dianini\Desktop\Marketplace2\obj\Debug\net7.0\Marketplace2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\bruno.dianini\Desktop\Marketplace2\obj\Debug\net7.0\Marketplace2.AssemblyInfoInputs.cache
+C:\Users\bruno.dianini\Desktop\Marketplace2\obj\Debug\net7.0\Marketplace2.AssemblyInfo.cs
+C:\Users\bruno.dianini\Desktop\Marketplace2\obj\Debug\net7.0\Marketplace2.csproj.CoreCompileInputs.cache
+C:\Users\bruno.dianini\Desktop\Marketplace2\bin\Debug\net7.0\Marketplace2.exe
+C:\Users\bruno.dianini\Desktop\Marketplace2\bin\Debug\net7.0\Marketplace2.deps.json
+C:\Users\bruno.dianini\Desktop\Marketplace2\bin\Debug\net7.0\Marketplace2.runtimeconfig.json
+C:\Users\bruno.dianini\Desktop\Marketplace2\bin\Debug\net7.0\Marketplace2.dll
+C:\Users\bruno.dianini\Desktop\Marketplace2\bin\Debug\net7.0\Marketplace2.pdb
+C:\Users\bruno.dianini\Desktop\Marketplace2\obj\Debug\net7.0\Marketplace2.dll
+C:\Users\bruno.dianini\Desktop\Marketplace2\obj\Debug\net7.0\refint\Marketplace2.dll
+C:\Users\bruno.dianini\Desktop\Marketplace2\obj\Debug\net7.0\Marketplace2.pdb
+C:\Users\bruno.dianini\Desktop\Marketplace2\obj\Debug\net7.0\Marketplace2.genruntimeconfig.cache
+C:\Users\bruno.dianini\Desktop\Marketplace2\obj\Debug\net7.0\ref\Marketplace2.dll

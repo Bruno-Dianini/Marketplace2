@@ -2,19 +2,19 @@ namespace AppEmpresa
 {
     public class Vendedor
     {
-        private string nome;
+        private string nomeFantasia;
         private string endereco;
-        private string rg;
+        private string cnpj;
         private string email;
-        private string cpf;
-        private string contaBancaria;
-        private string agenciaBancaria;
-        private string contaCorrente;
+        private string comissao;
+        private string razaoSocial;
 
-        public string Nome
+        private string senha;
+
+        public string NomeFantasia //
         {
-            get { return nome; }
-            set { nome = value; }
+            get { return nomeFantasia; }
+            set { nomeFantasia = value; }
         }
 
         public string Endereco
@@ -23,10 +23,10 @@ namespace AppEmpresa
             set { endereco = value; }
         }
 
-        public string Rg
+        public string Cnpj
         {
-            get { return rg; }
-            set { rg = value; }
+            get { return cnpj; }
+            set { cnpj = value; }
         }
 
         public string Email
@@ -35,28 +35,22 @@ namespace AppEmpresa
             set { email = value; }
         }
 
-        public string Cpf
+        public string Comissao//
         {
-            get { return cpf; }
-            set { cpf = value; }
+            get { return comissao; }
+            set { comissao = value; }
         }
 
-        public string ContaBancaria
+        public string RazaoSocial //
         {
-            get { return contaBancaria; }
-            set { contaBancaria = value; }
+            get { return razaoSocial; }
+            set { razaoSocial = value; }
         }
 
-        public string AgenciaBancaria
+        public string Senha
         {
-            get { return agenciaBancaria; }
-            set { agenciaBancaria = value; }
-        }
-
-        public string ContaCorrente
-        {
-            get { return contaCorrente; }
-            set { contaCorrente = value; }
+            get { return senha; }
+            set { senha = value; }
         }
     }
 }
