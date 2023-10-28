@@ -7,7 +7,7 @@ namespace AppEmpresa
         private string statusPedido;
         private string cliente;
         private string produto;
-
+        private int id ; 
         public string DataPedido
         {
             get { return dataPedido; }
@@ -37,6 +37,6 @@ namespace AppEmpresa
             get { return produto; }
             set { produto = value; }
         }
-
+        public int Id { get; internal set; }
     }
 }

@@ -85,7 +85,8 @@ namespace AppEmpresa
 
             // Obter todos os produtos
             List<Produto> todosProdutos = carrinhoRepositorio.ObterTodos();
-
+            
+            Console.WriteLine("********************************************"); 
             Console.WriteLine("Aqui estão as informações do banco de dados."); 
 
             Produto produto2 = new Produto();
@@ -148,9 +149,11 @@ namespace AppEmpresa
             carrinho.StatusPedido = "Entregue";
             carrinho.Cliente = "Rafael";
             carrinho.Produto = "Ventilador";
+            carrinho.Id = 4324;
             listaCarrinho.Add(carrinho);
 
             // Imprimindo informações dos clientes
+            Console.WriteLine("********************************************");
             Console.WriteLine("Informações dos Clientes:");
             foreach (Cliente c in listaClientes)
             {
@@ -187,6 +190,7 @@ namespace AppEmpresa
                 Console.WriteLine("Status Pedido: " + a.StatusPedido);
                 Console.WriteLine("Cliente: " + a.Cliente);
                 Console.WriteLine("Produto: " + a.Produto);
+                Console.WriteLine("ID " +a.Id);
                 Console.WriteLine();
             }
 
